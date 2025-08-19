@@ -24,7 +24,7 @@ The logged data is formatted into a dataset suitable for **machine learning work
 ---
 
 ## 🛠️ Hardware Setup
-- **Microcontroller**: Arduino / ESP32 / STM32 (specify your platform)  
+- **Microcontroller**: Arduino / ESP32 / STM32 (this MCU is a little difficult to use, so my advise is to use an Arduino Uno or the ESP32, ofcourse each one has some advantages and disadvantages)
 - **Input device**: Push button (simulates a noisy regulator/transistor signal)  
 - **Output**: Serial port logging (can be redirected to file for dataset building)  
 
