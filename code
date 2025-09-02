@@ -1,1 +1,32 @@
+const int LEDPin = 13;     // The LED is connected to pin 13
+const int BUTTONPin = 2;   // The Button is connected to pin 2
 
+boolean lastButton = LOW;  // Previous button state
+boolean currentButton = LOW; 
+boolean ledOn = false;     // Current LED state
+
+void setup() {
+  pinMode(LEDPin, OUTPUT);         
+  pinMode(BUTTONPin, INPUT_PULLUP); // Use internal pull-up
+}
+
+boolean debounce(boolean last) {
+  boolean current = digitalRead(BUTTONPin); // Read the button
+  if (last != current) { 
+    delay(5); // wait 5 ms
+    current = digitalRead(BUTTONPin); // read again
+  }
+  return current;
+}
+
+void loop() {
+  currentButton = debounce(lastButton); 
+
+  // Detect rising edge (button press)
+  if (lastButton == HIGH && currentButton == LOW) { 
+    ledOn = !ledOn; // Toggle LED
+  }
+
+  lastButton = currentButton; 
+  digitalWrite(LEDPin, ledOn); 
+}
