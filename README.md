@@ -26,10 +26,4 @@ It demonstrates **end-to-end system design**: from hardware signals ➝ embedded
 - **Input**: Push button (simulates noisy transitions)  
 - **Output**: Serial logging to PC  
 
-### Circuit Diagram
-```text
-[Button] ---- [Pin D2 on MCU]
-   |
-  GND
-
-[LED] ---- [Pin 13 on MCU]
+### SCHEMATIC AND WAVEFORM
