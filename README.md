@@ -26,5 +26,9 @@ It demonstrates **end-to-end system design**: from hardware signals ➝ embedded
 - **Input**: Push button (simulates noisy transitions)  
 - **Output**: Serial logging to PC  
 
-### CIRCUIT
+## CIRCUIT
 <img width="315" height="237" alt="Image" src="https://github.com/user-attachments/assets/327a3db4-5070-4436-8c1e-bb4f34f46942" />
+
+
+## WAVEFORM
+
