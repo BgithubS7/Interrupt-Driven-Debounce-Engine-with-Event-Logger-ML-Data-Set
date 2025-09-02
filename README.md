@@ -31,4 +31,5 @@ It demonstrates **end-to-end system design**: from hardware signals ➝ embedded
 
 
 ## WAVEFORM
+<img width="307" height="238" alt="Image" src="https://github.com/user-attachments/assets/a8f92794-f26b-44b2-bb08-c46f26573a31" />
 
