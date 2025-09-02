@@ -1,33 +1,35 @@
-# Interrupt Debounce Engine & Event Logger (with ML Dataset)
+# 🚦 Interrupt Debounce Engine & Event Logger (with ML Dataset)
 
 ## 📖 Overview
-This project implements a **debounce engine** for push-button interrupts, paired with an **event logger** for structured dataset generation.  
+Mechanical switches and regulators often generate **bouncy, noisy transitions** when toggled.  
+This project implements an **interrupt-driven debounce engine** with an integrated **event logger** that:
 
-A push button is used to simulate the noisy transitions typically seen with mechanical switches, transistors, or voltage regulators. The debounce logic filters out spurious edges, while the event logger records reliable press/release events along with timing information.  
+- Cleans up noisy edges in real time  
+- Logs press/release events with precise timestamps and durations  
+- Formats data into **ML-ready datasets (CSV/JSON)**  
 
-The logged data is formatted into a dataset suitable for **machine learning workflows**, enabling training and validation of models on real-world hardware signals.
+It demonstrates **end-to-end system design**: from hardware signals ➝ embedded firmware ➝ structured dataset ➝ ML pipeline.
 
 ---
 
 ## ✨ Features
-- **Interrupt-driven debounce engine**  
-  - Handles mechanical switch bounce with configurable debounce times  
-- **Event logging**  
-  - Records press/release events with timestamps, durations, and raw signal states  
-- **Noise filtering**  
-  - Prevents false triggers caused by spurious transitions  
-- **Dataset generation**  
-  - Export logged events as CSV/JSON for downstream ML processing  
-- **Hardware-friendly design**  
-  - Low-latency, MCU-compatible implementation  
+- ⚡ **Interrupt-driven debounce logic** (configurable delay)  
+- 📝 **Event logging engine** (timestamp, duration, state)  
+- 🔊 **Noise filtering** (filters spurious edges)  
+- 📊 **Dataset generation** (export as CSV/JSON)  
+- 💻 **Portable firmware** (Arduino, ESP32, STM32 compatible)  
 
 ---
 
 ## 🛠️ Hardware Setup
-- **Microcontroller**: Arduino / ESP32 / STM32 (this MCU is a little difficult to use, so my advise is to use an Arduino Uno or the ESP32, ofcourse each one has some advantages and disadvantages)
-- **Input device**: Push button (simulates a noisy regulator/transistor signal)  
-- **Output**: Serial port logging (can be redirected to file for dataset building)
+- **MCU**: Arduino Uno (beginner friendly), ESP32 (Wi-Fi logging), STM32 (advanced)  
+- **Input**: Push button (simulates noisy transitions)  
+- **Output**: Serial logging to PC  
 
-- ## ADD EXTENDED DOCUMENTATION
+### Circuit Diagram
+```text
+[Button] ---- [Pin D2 on MCU]
+   |
+  GND
 
-
+[LED] ---- [Pin 13 on MCU]
